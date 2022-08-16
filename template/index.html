@@ -1,0 +1,39 @@
+<!DOCTYPE html> {% extends "base.html" %} {% block body_block %} {% load static %}
+
+<h1 class="container">Matin Rezaei</h1>
+
+{{ insert_me }}
+
+<div class="container">
+    <img class="border border-danger rounded-5" src="{% static 'image/3.jpg' %}" alt="didn't find it"><br>
+
+</div>
+
+{% if Access_Record %}
+
+<div class="container" id="access_record">
+
+    <table>
+
+        <thead>
+            <th>Name</th>
+            <th>Date</th>
+        </thead>
+
+        {% for tmp in Access_Record %}
+        <tr>
+            <td>{{ tmp.name }}</td>
+            <td>{{ tmp.date }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    {% else %}
+    <p>No Find Any Things</p>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

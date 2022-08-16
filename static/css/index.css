@@ -1,0 +1,10 @@
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+table,
+th,
+td {
+    border: 20x solid red
+}
